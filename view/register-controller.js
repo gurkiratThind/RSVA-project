@@ -26,7 +26,7 @@ module.exports.register = function (req, res) {
         res.json({
           status: true,
           data: results,
-          message: "user registered sucessfully",
+          message: "user registered sucessfully!! Great Work",
         });
       }
     }
