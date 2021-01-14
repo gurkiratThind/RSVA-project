@@ -20,7 +20,7 @@ module.exports.register = function (req, res) {
       if (error) {
         res.json({
           status: false,
-          message: "there are some error with query!!!",
+          message: "there are some errors with query!!!",
         });
       } else {
         res.json({
