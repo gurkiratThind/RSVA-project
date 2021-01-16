@@ -1,13 +1,14 @@
-var express = require("express");
-var bodyParser = require("body-parser");
-var multer = require("multer");
-var cors = require("cors");
+const express = require("express");
+const bodyParser = require("body-parser");
+const multer = require("multer");
+const cors = require("cors");
 const fs = require("fs");
-var connection = require("./../config/config");
-var app = express();
+const connection = require("./../config/config");
+const app = express();
 app.use("./uploads/", express.static("uploads"));
 //var authenticateController = require("./controllers/authenticate-controller");
-var registerController = require("./register-controller");
+const registerController = require("./register-controller");
+const cst = require("./client_speciality");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -42,22 +43,19 @@ const upload = multer({
   fileFilter: fileFilter,
 });
 
+var cpUpload = upload.fields([
+  { name: "mechphoto", maxCount: 1 },
+  { name: "shopphoto", maxCount: 8 },
+]);
 //const upload = multer({ dest: "uploads/" }).single("image");
 
-app.post("/api/register", upload.single("image"), registerController.register);
+app.post("/api/register", cpUpload, registerController.register);
 
-app.post("/image", (req, res) => {
-  upload(req, res, (err) => {
-    if (err) {
-      res.status(400).send("Something went wrong!");
-    }
-    res.send(req.file);
-  });
-});
 //app.post("/api/authenticate", authenticateController.authenticate);
 
 //console.log(authenticateController);
 app.post("/controllers/register-controller", registerController.register);
+app.get("/clientspeciality", cst.clientSpeciality);
 // app.post(
 //   "/controllers/authenticate-controller",
 //   authenticateController.authenticate
