@@ -9,6 +9,7 @@ app.use("./uploads/", express.static("uploads"));
 //var authenticateController = require("./controllers/authenticate-controller");
 const registerController = require("./register-controller");
 const cst = require("./client_speciality");
+const mechanics = require("./mechanics_list");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -53,9 +54,8 @@ app.post("/api/register", cpUpload, registerController.register);
 
 //app.post("/api/authenticate", authenticateController.authenticate);
 
-//console.log(authenticateController);
-app.post("/controllers/register-controller", registerController.register);
-app.get("/clientspeciality", cst.clientSpeciality);
+app.get("/api/clientspeciality", cst.clientSpeciality);
+app.post("/api/mechaniclist", mechanics.mechanicsList);
 // app.post(
 //   "/controllers/authenticate-controller",
 //   authenticateController.authenticate
