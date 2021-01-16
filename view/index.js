@@ -6,7 +6,7 @@ const fs = require("fs");
 var connection = require("./../config/config");
 var app = express();
 app.use("./uploads/", express.static("uploads"));
-//var authenticateController = require("./controllers/authenticate-controller");
+var authenticateController = require("./authenticate-controller");
 var registerController = require("./register-controller");
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -45,7 +45,7 @@ const upload = multer({
 //const upload = multer({ dest: "uploads/" }).single("image");
 
 app.post("/api/register", upload.single("image"), registerController.register);
-
+//app.post("/api/login",registerController.login);
 app.post("/image", (req, res) => {
   upload(req, res, (err) => {
     if (err) {
@@ -54,7 +54,7 @@ app.post("/image", (req, res) => {
     res.send(req.file);
   });
 });
-//app.post("/api/authenticate", authenticateController.authenticate);
+app.post("/.", authenticateController.authenticate);
 
 //console.log(authenticateController);
 app.post("/controllers/register-controller", registerController.register);
