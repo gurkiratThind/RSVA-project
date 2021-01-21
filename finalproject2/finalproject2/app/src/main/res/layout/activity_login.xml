@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Email"
+        android:labelFor="@id/uEmail"
+        android:layout_marginTop="70dp"
+        />
+
+    <EditText
+        android:id="@+id/uEmail"
+        android:inputType="text"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="password"
+        android:labelFor="@id/password"
+        android:layout_marginTop="150dp"
+        />
+
+    <EditText
+        android:id="@+id/password"
+        android:inputType="text"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"/>
+    <TextView
+        android:id="@+id/uSignin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account Please Sign in"
+        android:layout_marginTop="350dp"
+        />
+    <CheckBox
+        android:id="@+id/simpleCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remember me"
+        android:layout_marginTop="220dp"/>
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="150dp"
+        android:text="login"
+        />
+    />
+</RelativeLayout>

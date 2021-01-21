@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Name"
+        android:labelFor="@id/uName"
+        android:layout_marginTop="5dp"
+        />
+
+    <EditText
+        android:id="@+id/uName"
+        android:inputType="text"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Email"
+        android:labelFor="@id/uEmail"
+        android:layout_marginTop="70dp"
+        />
+
+    <EditText
+        android:id="@+id/uEmail"
+        android:inputType="text"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Password"
+        android:labelFor="@id/password"
+        android:layout_marginTop="150dp"
+        />
+
+    <EditText
+        android:id="@+id/password"
+        android:inputType="text"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"/>
+    <CheckBox
+        android:id="@+id/simpleCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remember me"
+        android:layout_marginTop="220dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ulogin"
+        android:text="Already have an account log in"
+        android:layout_marginTop="340dp"
+        />
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="150dp"
+        android:text="login"
+        />
+    />
+</RelativeLayout>
