@@ -13,7 +13,6 @@ var registerController = require("./register-controller");
 const cst = require("./client_speciality");
 const mechanics = require("./mechanics_list");
 
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -52,7 +51,6 @@ var cpUpload = upload.fields([
   { name: "shopphoto", maxCount: 8 },
 ]);
 //const upload = multer({ dest: "uploads/" }).single("image");
-
 
 //app.post("/.", authenticateController.authenticate);
 

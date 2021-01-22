@@ -6,14 +6,15 @@ module.exports.register = function (req, res) {
   let today = new Date();
   console.log(req.file);
   //  var encryptedString = cryptr.encrypt(req.body.password);
+  // var base64Data = req.rawBody.replace(/^data:image\/png;base64,/, "");
   var users = {
     mechname: req.body.mechname,
     mechemail: req.body.mechemail,
     opendays: req.body.opendays,
     opentime: today,
     closetime: today,
-    mechphoto: req.files["mechphoto"],
-    shopphoto: req.files["shopphoto"],
+    mechphoto: req.files["mechphoto"].buffer,
+    shopphoto: req.files["shopphoto"].buffer,
     phoneno: req.body.phoneno,
     shopname: req.body.shopname,
     sp_id: req.body.sp_id,

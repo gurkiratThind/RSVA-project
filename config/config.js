@@ -2,7 +2,7 @@ var mysql = require("mysql");
 var connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "admin",
+  password: "020593",
   database: "mydb",
 });
 connection.connect(function (err) {
@@ -10,6 +10,7 @@ connection.connect(function (err) {
     debugger;
     console.log("Database is connected");
   } else {
+    console.log(err);
     console.log("Error while connecting with database");
   }
 });
