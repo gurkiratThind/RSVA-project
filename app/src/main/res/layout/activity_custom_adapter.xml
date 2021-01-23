@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appcolor"
+    tools:context=".CustomAdapter">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relclick">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel1"
+        android:layout_margin="@dimen/_2sdp"
+        android:gravity="center">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_tumbnali"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/ic_launcher_background"
+        android:foreground="@drawable/circle1"
+        android:layout_gravity="center"
+        />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel1"
+        android:gravity="center"
+        android:id="@+id/idtext"
+        android:textColor="@color/white"
+        android:text="abdc"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appcolor"
+    tools:context=".DetailsActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shopimage"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shopimage"
+        android:id="@+id/rel1"
+        android:layout_marginTop="15dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+
+            android:layout_marginLeft="10dp"
+            android:text="abcf"
+            android:id="@+id/shoptextname"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/shoptextname"
+            android:text="Timmings : 10 A.M.-5A.M."
+            android:id="@+id/shoptexttime"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/shoptexttime"
+            android:text="Tommings : 10 A.M.-5A.M."
+            android:id="@+id/ratingshop"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/ratingshop"
+            android:text="Description \n Good SHop you can find here good clean Enviroment and helpful service man where you can find good assistance"
+            android:id="@+id/description"/>
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rel1"
+        android:gravity="bottom"
+       >
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:padding="15dp"
+        android:id="@+id/gobtn"
+        android:text="Ready To Go!!"
+        android:gravity="center"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/appcolor"
+    tools:context=".ThankyouActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Thankyou For Choosing Our Service  :-)"
+        android:textSize="25dp"
+        android:id="@+id/txt1"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Your Mechanic will Reach you out soon:-)"
+        android:layout_below="@id/txt1"
+        android:textSize="25dp"
+        android:id="@+id/txt2"
+        android:textStyle="bold"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_below="@id/txt2"
+        android:textAlignment="center"
+        android:text="Logout"
+        android:id="@+id/logoutbtn"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_below="@id/logoutbtn"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Home"
+        android:id="@+id/homebtn"/>
+
+</RelativeLayout>
