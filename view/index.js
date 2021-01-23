@@ -5,7 +5,7 @@ const cors = require("cors");
 const fs = require("fs");
 const connection = require("./../config/config");
 const app = express();
-app.use("./uploads/", express.static("uploads"));
+app.use(express.static("uploads"));
 
 var authenticateController = require("./authenticate-controller");
 var registerController = require("./register-controller");

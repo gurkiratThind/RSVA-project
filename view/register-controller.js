@@ -4,17 +4,16 @@ const connection = require("../config/config");
 
 module.exports.register = function (req, res) {
   let today = new Date();
-  console.log(req.file);
-  //  var encryptedString = cryptr.encrypt(req.body.password);
-  // var base64Data = req.rawBody.replace(/^data:image\/png;base64,/, "");
+  mechphotos = req.files["mechphoto"];
+  console.log(mechphotos);
   var users = {
     mechname: req.body.mechname,
     mechemail: req.body.mechemail,
     opendays: req.body.opendays,
     opentime: today,
     closetime: today,
-    mechphoto: req.files["mechphoto"].buffer,
-    shopphoto: req.files["shopphoto"].buffer,
+    mechphoto: req.files["mechphoto"],
+    shopphoto: req.files["mechphoto"],
     phoneno: req.body.phoneno,
     shopname: req.body.shopname,
     sp_id: req.body.sp_id,
@@ -22,6 +21,7 @@ module.exports.register = function (req, res) {
     long: req.body.long,
     password: req.body.password,
     shopaddress: req.body.shopaddress,
+    basic_rate: req.body.basic_rate,
   };
   connection.query(
     "INSERT INTO mechanics SET ?",
