@@ -31,6 +31,8 @@ public class MechanicInfo extends AppCompatActivity {
         double basicrate=in.getDoubleExtra("basicrate",0);
         byte[] shopimg=in.getByteArrayExtra("shopimg");
         byte[] mechimg=in.getByteArrayExtra("mechimg");
+        double latitude=in.getDoubleExtra("lat",0);
+        double longitude=in.getDoubleExtra("long",0);
         Button sendrequest=(Button) findViewById(R.id.sendrequest);
 
         TextView textshopname=(TextView) findViewById(R.id.selectedmcshopname);
@@ -57,8 +59,9 @@ public class MechanicInfo extends AppCompatActivity {
         sendrequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in=new Intent(MechanicInfo.this,ThankyouActivity.class);
-
+                Intent in=new Intent(MechanicInfo.this,MechLocationActivity.class);
+                in.putExtra("lat",latitude);
+                in.putExtra("long",longitude);
                 startActivity(in);
             }
         });

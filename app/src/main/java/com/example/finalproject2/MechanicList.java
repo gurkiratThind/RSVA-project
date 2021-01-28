@@ -40,7 +40,7 @@ public class MechanicList extends AppCompatActivity {
                             .readTimeout(1, TimeUnit.MINUTES)
                             .build();
                     Retrofit retrofit = new Retrofit.Builder()
-                            .baseUrl("http://10.0.2.2:8012/api/")  // for emulator
+                           .baseUrl("http://10.0.2.2:8012/api/")  // for emulator
                            // .baseUrl("http://192.168.2.28:8012/api/")       //for mobile device use ipconfig in cmd and then wireless and then take ip of ipv4
                             .addConverterFactory(GsonConverterFactory.create())
                             .build();
@@ -100,6 +100,8 @@ public class MechanicList extends AppCompatActivity {
                         in.putExtra("basicrate",dtlist.get(position).getBasicRate());
                         in.putExtra("Otimmings",dtlist.get(position).getOpentime());
                         in.putExtra("Ctimmings",dtlist.get(position).getClosetime());
+                        in.putExtra("lat",dtlist.get(position).getLat());
+                        in.putExtra("long",dtlist.get(position).getLong());
                         in.putExtra("shopimg",shopbytes);
                         in.putExtra("mechimg",mechbytes);
                         startActivity(in);
