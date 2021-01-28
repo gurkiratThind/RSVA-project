@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/appcolor"
+    android:background="@drawable/back_all"
     android:fitsSystemWindows="true">
 
     <LinearLayout
@@ -101,6 +101,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_15sdp"
+            android:background="@color/pale_orange"
+            android:fontFamily="@font/montserrat"
+            android:textColor="#312C51"
             android:padding="12dp"
             android:text="Register"/>
 
@@ -110,6 +113,8 @@
             android:layout_marginBottom="@dimen/_2sdp"
             android:text="Already Have an Account? Sign In"
             android:textColor="@color/white"
+
+            android:fontFamily="@font/montserrat"
             android:gravity="center"
             android:textSize="16dip"/>
 

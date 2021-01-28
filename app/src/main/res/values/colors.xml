@@ -33,7 +33,7 @@
         <item>@color/dot_light_screen3</item>
         <item>@color/dot_light_screen4</item>
     </array>
-
+    <color name="pale_orange">#F0C38E</color>
     <array name="array_dot_inactive">
         <item>@color/dot_dark_screen1</item>
         <item>@color/dot_dark_screen2</item>
